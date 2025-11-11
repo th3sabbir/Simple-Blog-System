@@ -119,4 +119,3 @@ This project demonstrates:
 -   **`post.php`**: Displays the full content of a single blog post, identified by its unique slug. It also handles the display and submission of comments for that post.
 -   **`dashboard.php`**: A protected route for logged-in users. It serves as a control panel where users can view, create, edit, and delete their own posts.
 -   **`config/db.php`**: Establishes the connection to the MySQL database using credentials and makes the connection object available to other scripts.
--   **`functions.php`**: A utility file containing common functions used across the site, such as checking user login status (`is_logged_in()`) and generating post excerpts (`display_excerpt()`). This file is typically included in `header.php`.
