@@ -67,7 +67,7 @@ The project uses a relational database to manage its data, centered around three
 -   `posts`: Stores all blog articles, with fields for title, content, slug, status (`draft`, `published`), and view count.
 -   `comments`: Contains comments made by users on posts, linked by `post_id` and including an approval `status`.
 
-The `database/blogsystem.sql` file contains the necessary SQL commands to create these tables and their relationships.
+The `database/blog_system.sql` file contains the necessary SQL commands to create these tables and their relationships.
 
 ## ⚙️ Core Components
 
@@ -101,21 +101,10 @@ This project demonstrates:
 
 -   **PHP Fundamentals**: Object-oriented database connections, prepared statements, session management
 -   **Database Design**: Relational database schema, foreign keys, normalization
--   **Security**: SQL injection prevention, input validation, output escaping
 -   **Authentication**: User registration, login, role-based access control
 -   **Frontend Integration**: Responsive design, mobile-friendly menu, event handling
 -   **CRUD Operations**: Create, read, update, delete functionality for posts
 -   **Web Standards**: HTML5 semantics, CSS3 styling, JavaScript DOM manipulation
-
-## 🔒 Security Features
-
--   Prepared statements prevent SQL injection
--   Input sanitization with `clean_input()`
--   Output escaping with `htmlspecialchars()` and `nl2br()`
--   Session-based authentication
--   Role-based access control
--   Permission checks on edit/delete operations
--   CSRF protection through session validation
 
 ## 📱 Responsive Features
 
