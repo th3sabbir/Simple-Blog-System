@@ -1,6 +1,6 @@
-# BlogSystem: A Dynamic PHP Blogging Platform
+# Blogify: A Dynamic Simple Blogging Platform
 
-BlogSystem is a feature-rich, modern blogging platform built with PHP and MySQL. It provides a complete solution for creating, managing, and sharing content, with features designed for both writers and readers.
+Blogify is a feature-rich, modern blogging platform built with PHP and MySQL. It provides a complete solution for creating, managing, and sharing content, with features designed for both writers and readers.
 
 **Live Demo**: [http://blogify.myartsonline.com](http://blogify.myartsonline.com)
 
@@ -70,6 +70,61 @@ The project uses a relational database to manage its data, centered around three
 The `database/blogsystem.sql` file contains the necessary SQL commands to create these tables and their relationships.
 
 ## ⚙️ Core Components
+
+### User Section
+
+-   **`index.php`**: Homepage with hero section, featured post, and paginated latest posts
+-   **`post.php`**: Single post view with full content, metadata, and comments
+-   **`dashboard.php`**: User dashboard for managing their own posts
+-   **`create-post.php`**: Form to create new blog posts
+-   **`edit-post.php`**: Form to edit user's own posts
+-   **`login.php`** / **`register.php`**: User authentication pages
+-   **`header.php`** / **`footer.php`**: Shared layout components
+
+### Admin Section
+
+-   **`dashboard.php`**: Manage all posts on platform
+-   **`create-post.php`**: Admin create post form
+-   **`edit-post.php`**: Admin edit any post
+-   **`login.php`**: Admin authentication
+-   **`header.php`** / **`admin/footer.php`**: Admin layout components
+
+### Shared Resources
+
+-   **`config/db.php`**: Database connection and helper functions
+-   **`assets/css/style.css`**: Main stylesheet
+-   **`assets/js/main.js`**: JavaScript with mobile menu functionality
+
+## 📝 Key Learning Outcomes
+
+This project demonstrates:
+
+-   **PHP Fundamentals**: Object-oriented database connections, prepared statements, session management
+-   **Database Design**: Relational database schema, foreign keys, normalization
+-   **Security**: SQL injection prevention, input validation, output escaping
+-   **Authentication**: User registration, login, role-based access control
+-   **Frontend Integration**: Responsive design, mobile-friendly menu, event handling
+-   **CRUD Operations**: Create, read, update, delete functionality for posts
+-   **Web Standards**: HTML5 semantics, CSS3 styling, JavaScript DOM manipulation
+
+## 🔒 Security Features
+
+-   Prepared statements prevent SQL injection
+-   Input sanitization with `clean_input()`
+-   Output escaping with `htmlspecialchars()` and `nl2br()`
+-   Session-based authentication
+-   Role-based access control
+-   Permission checks on edit/delete operations
+-   CSRF protection through session validation
+
+## 📱 Responsive Features
+
+-   Mobile-friendly navigation with hamburger menu
+-   Robust menu toggle functionality with multiple event listeners
+-   Auto-close menu on navigation, resize, or Escape key
+-   Overlay support for mobile menu
+-   Accessibility attributes (aria-labels, aria-expanded)
+-   Touch and pointer event support
 
 -   **`index.php`**: The main landing page. It fetches and displays a paginated list of the latest published posts and highlights the single most-viewed post as "Featured".
 -   **`post.php`**: Displays the full content of a single blog post, identified by its unique slug. It also handles the display and submission of comments for that post.
